@@ -22,3 +22,30 @@ def zo(n):
 
 n=input()
 print(zo(n))
+
+def alp_counter(n):
+    alphabets=[]
+    numbers=[]
+    c=''
+    temp_number=''
+    for i in range(len(n)):
+        if n[i].isalpha():
+            alphabets.append(n[i])
+            
+            if temp_number:
+                numbers.append(int(temp_number))
+                temp_number=''
+        elif n[i].isdigit():
+            temp_number+=n[i]
+        
+    if temp_number:
+        numbers.append(int(temp_number))
+
+    for i in range(len(alphabets)):
+        if i<len(numbers):
+            c+=alphabets[i]*numbers[i]
+        
+    return c
+    
+n=input()
+print(alp_counter(n))
