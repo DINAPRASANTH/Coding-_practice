@@ -49,3 +49,5 @@ def alp_counter(n):
     
 n=input()
 print(alp_counter(n))
+
+
